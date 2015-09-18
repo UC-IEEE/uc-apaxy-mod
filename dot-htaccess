@@ -1,0 +1,108 @@
+#
+# Apaxy by @adamwhitcroft
+# Very small modifications for ieee.uc.edu by @ernstki.
+#
+# GETTING STARTED
+# ===============
+#
+# After having cloned the repository from GitHub
+#
+#   cd /web/sites/<your org's site>/htdocs
+#   git clone https://github.uc.edu/IEEE/ieee-apaxy-mod.git index-theme
+#
+# then create a symbolic link to 'dot-htaccess' named '.htacces' in
+# directories where you want fancy indexes enabled, e.g.:
+#
+#   # working dir: /web/sites/your.site.uc.edu/htdocs
+#   cd pub
+#   ln -s ../index-theme/dot-htaccess .htaccess
+#
+# This '.htaccess' file will now be hidden, so you'll need to use 'ls -la' to
+# see it. The settings in this file will apply to subdirectories as well, e.g., 
+# your.site.uc.edu/pub/software using the example.
+#
+# If you wish to customize the header or footer for just a specific
+# subdirectory of your site, make a COPY of 'dot-htaccess' as '.htaccess' in
+# the desired directory.
+#
+# If you don't like '/index-theme' your you cloned the Git repo somewhere
+# else, just do a global search-and-replace on this file for "/index-theme"
+# and update it to match the directory (rooted at your "server root") where
+# you've cloned this repository. Relative paths (e.g., ../index-theme) might
+# work in some cases.
+#
+# For a full breakdown of the mod_autoindex module:
+# http://apache.org/docs/2.2/mod/mod_autoindex.html
+#
+
+	# ENABLE INDEXING
+	Options +Indexes
+
+	# INDEX OPTIONS
+	IndexOptions +Charset=UTF-8 +FancyIndexing +IgnoreCase +FoldersFirst +XHTML +HTMLTable +SuppressRules +SuppressDescription +NameWidth=*
+
+	# HIDE /theme DIRECTORY
+	IndexIgnore .htaccess theme
+
+#
+# GENERAL ICONS (BLANK, DIRECTORY, PARENT DIRECTORY)
+#
+
+#
+# Replace {FOLDERNAME} with your directory URL eg:
+# If your directory is http://mywebsite.com/share/
+# you would change to:
+#
+# AddIcon /sharetheme/icons/blank.png ^^BLANKICON^^
+#
+
+	AddIcon /index-theme/icons/blank.png ^^BLANKICON^^
+	AddIcon /index-theme/icons/folder.png ^^DIRECTORY^^
+	AddIcon /index-theme/icons/folder-home.png ..
+
+#
+# EXTENSION SPECIFIC ICONS
+#
+
+	AddIcon /index-theme/icons/audio.png .aif .iff .m3u .m4a .mid .mp3 .mpa .ra .wav .wma .f4a .f4b .oga .ogg
+	AddIcon /index-theme/icons/bin.png .bin
+	AddIcon /index-theme/icons/c.png .c
+	AddIcon /index-theme/icons/calc.png .xlsx .xlsm .xltx .xltm .xlam .xlr .xls .csv
+	AddIcon /index-theme/icons/css.png .css
+	AddIcon /index-theme/icons/deb.png .deb
+	AddIcon /index-theme/icons/doc.png .doc .docx .docm .dot .dotx .dotm .log .msg .odt .pages .rtf .tex .wpd .wps
+	AddIcon /index-theme/icons/draw.png .svg
+	AddIcon /index-theme/icons/eps.png .ai .eps
+	AddIcon /index-theme/icons/gif.png .gif
+	AddIcon /index-theme/icons/html.png .html .xhtml .shtml .htm
+	AddIcon /index-theme/icons/ico.png .ico
+	AddIcon /index-theme/icons/java.png .jar
+	AddIcon /index-theme/icons/jpg.png .jpg .jpeg
+	AddIcon /index-theme/icons/js.png .js .json
+	AddIcon /index-theme/icons/markdown.png .md
+	AddIcon /index-theme/icons/package.png .pkg .dmg
+	AddIcon /index-theme/icons/pdf.png .pdf
+	AddIcon /index-theme/icons/php.png .php .phtml
+	AddIcon /index-theme/icons/png.png .png
+	AddIcon /index-theme/icons/ps.png .ps
+	AddIcon /index-theme/icons/psd.png .psd
+	AddIcon /index-theme/icons/rar.png .rar
+	AddIcon /index-theme/icons/rb.png .rb
+	AddIcon /index-theme/icons/rpm.png .rpm
+	AddIcon /index-theme/icons/rss.png .rss
+	AddIcon /index-theme/icons/sql.png .sql
+	AddIcon /index-theme/icons/tiff.png .tiff
+	AddIcon /index-theme/icons/text.png .txt .nfo
+	AddIcon /index-theme/icons/video.png .asf .asx .avi .flv .mkv .mov .mp4 .mpg .rm .srt .swf .vob .wmv .m4v .f4v .f4p .ogv
+	AddIcon /index-theme/icons/xml.png .xml
+	AddIcon /index-theme/icons/zip.png .zip
+	DefaultIcon /index-theme/icons/default.png
+
+#
+# THEME FILES
+#
+
+	HeaderName /index-theme/header.html
+	ReadmeName /index-theme/footer.html
+	IndexStyleSheet "/index-theme/style.css"
+
