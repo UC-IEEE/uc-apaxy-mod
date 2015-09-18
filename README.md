@@ -1,8 +1,11 @@
-#  Apaxy by @adamwhitcroft
-Very small modifications for ieee.uc.edu by @ernstki. The IEEE-specific
-customizations are maintained in a separate "ieee" branch, so this repository
-is ready for any on-campus to clone and start using. (You'll want to customize
-the contact email in the footer is all; see below for instructions.)
+#   Apaxy mod_autoindex theme
+### Classy Apache directory indexes made easy
+
+Originally by @AdamWhitcroft ([home][ah]), with ery small modifications for
+ieee.uc.edu by @ernstki. The IEEE-specific customizations are maintained in a
+separate "ieee" branch, so this repository is ready for any on-campus to clone
+and start using. (You'll want to customize the contact email in the footer is
+all; see below for instructions.)
 
 ## Getting started
 
@@ -54,4 +57,5 @@ For a full breakdown of the settings for the Apache `mod_autoindex` module, chec
 [relevant section][ap1] of the manual.
 
 
+[ah]:  http://adamwhitcroft.com/apaxy/
 [ap1]: http://apache.org/docs/2.2/mod/mod_autoindex.html
