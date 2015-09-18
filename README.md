@@ -1,12 +1,18 @@
 #  Apaxy by @adamwhitcroft
-Very small modifications for ieee.uc.edu by @ernstki.
+Very small modifications for ieee.uc.edu by @ernstki. The IEEE-specific
+customizations are maintained in a separate "ieee" branch, so this repository
+is ready for any on-campus to clone and start using. (You'll want to customize
+the contact email in the footer is all; see below for instructions.)
 
 ## Getting started
 
 After having cloned the repository from GitHub like so:
 
     cd /web/sites/<your org's site>/htdocs
-    git clone https://github.uc.edu/IEEE/ieee-apaxy-mod.git index-theme
+    # Either:
+    git clone https://github.com/UC-IEEE/uc-apaxy-mod.git index-theme
+    # or:
+    # git clone https://github.uc.edu/IEEE/uc-apaxy-mod.git index-theme
 
 Create a symbolic link to `dot-htaccess` named `.htacces` in directories where
 you want fancy indexes enabled, _e.g._:
@@ -22,7 +28,7 @@ _e.g._, `your.site.uc.edu/pub/software` using the example.
 
 ## Customization
 
-You'll definitely want to replace `admin@your-org.uc.edu` in `header.html`
+You'll definitely want to replace `admin@your-org.uc.edu` in `footer.html`
 (around line 5) with your actual webmaster/webmistress' contact email.
 
 If you wish to customize the header or footer for just a specific
