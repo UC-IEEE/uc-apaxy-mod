@@ -1,7 +1,8 @@
 #   Apaxy mod_autoindex theme
 ### Classy Apache directory indexes made easy
+![](screenshot.png)
 
-Originally by @AdamWhitcroft ([home][ah]), with ery small modifications for
+Originally by @AdamWhitcroft ([home][ah]), with very small modifications for
 ieee.uc.edu by @ernstki. The IEEE-specific customizations are maintained in a
 separate "ieee" branch, so this repository is ready for any on-campus to clone
 and start using. (You'll want to customize the contact email in the footer is
