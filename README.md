@@ -18,7 +18,7 @@ After having cloned the repository from GitHub like so:
     # or:
     # git clone https://github.uc.edu/IEEE/uc-apaxy-mod.git index-theme
 
-Create a symbolic link to `dot-htaccess` named `.htacces` in directories where
+Create a symbolic link to `dot-htaccess` named `.htaccess` in directories where
 you want fancy indexes enabled, _e.g._:
 
     # working dir: /web/sites/your.site.uc.edu/htdocs
